@@ -4,7 +4,7 @@ import BlogPage from './blog_detail'
 
 function App() {
   return (
-    <div>
+    <div className='main'>
       <BlogPage />     
     </div>
   )
