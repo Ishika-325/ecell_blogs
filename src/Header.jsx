@@ -40,7 +40,7 @@ export default function Header() {
             </a>
 
             <a
-              href="/blog"
+              href="/"
               className="px-6 py-3 text-white font-medium hover:bg-blue-800/50 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Blog

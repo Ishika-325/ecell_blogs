@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex space-x-4">
+            <div className="flex mt-4 space-x-4">
               <a
                 href="#"
                 className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"

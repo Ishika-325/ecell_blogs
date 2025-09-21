@@ -5,6 +5,7 @@ import BlogPostCard from './BlogPostCard';
 import Header from './Header';
 import Footer from './Footer';
 import Login from './Pages/Login';
+import BlogPage from './Blog_detail';
 
 function App() {
   return (
@@ -17,7 +18,14 @@ function App() {
           element={
             <>
               <BlogHero />
-              <BlogPostCard />
+            </>
+          }
+        />
+        <Route
+          path="/blog_detail"
+          element={
+            <>
+              <BlogPage />
             </>
           }
         />

@@ -29,6 +29,8 @@ export default function BlogHero() {
           />
         </div>
       </div>
+
+      <BlogPostCard />
     </section>
   );
 }
