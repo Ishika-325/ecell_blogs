@@ -1,4 +1,5 @@
 import React from "react";
+import BlogPostCard from "./BlogPostCard";
 
 export default function BlogHero() {
   return (

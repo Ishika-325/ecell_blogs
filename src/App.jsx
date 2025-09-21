@@ -1,7 +1,9 @@
 import React from 'react'
 import BlogPage from './Blog_detail'
 import BlogHero from './BlogHero'
+import BlogPostCard from './BlogPostCard'
 import Header from './Header'
+import AddBlogForm from './BlogForm'
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
     <div className='main'>
       <Header/>
       <BlogHero/>
-      <BlogPage />     
+      <BlogPostCard />    
     </div>
   )
 }
