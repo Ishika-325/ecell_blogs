@@ -9,7 +9,7 @@ export default function Header() {
     "SIP",
     "CAP",
     "Startup Incubation",
-    "Imprenditor",
+    "Imprenditore",
     "E-mentoring",
     "Skill Development",
   ];
@@ -158,9 +158,13 @@ export default function Header() {
 
           {/* Sign In Button */}
           <div className="flex items-center space-x-4">
-            <button className="border-2 border-blue-400 text-blue-300 hover:bg-blue-500/20 hover:text-white px-6 py-2 font-medium rounded-full transition-all duration-200 hover:scale-105 bg-transparent">
+            <a href="/login">
+            <button
+            variant="outline" 
+            className="border-2 border-blue-400 text-blue-300 hover:bg-blue-500/20 hover:text-white px-6 py-2 font-medium rounded-full transition-all duration-200 hover:scale-105 bg-transparent">
               Sign in
             </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
