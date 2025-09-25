@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Login from './Pages/Login';
 import BlogPage from './Blog_detail';
+import AdminPanel from './Pages/AdminPanel';
 
 function App() {
   return (
@@ -28,6 +29,14 @@ function App() {
               <BlogPage />
             </>
           }
+        />
+        <Route 
+        path="/admin"
+        element={
+          <>
+          <AdminPanel/>
+          </>
+        }
         />
       </Routes>
       <Footer />
