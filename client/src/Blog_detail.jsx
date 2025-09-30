@@ -2,9 +2,11 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { blogsData } from "./data/blogs";
+import { useRef, useEffect } from "react";
 
 // A simpler card for the sidebar to avoid nested Link issues or complex styling
 const SidebarBlogCard = ({ post }) => {
+
   return (
     <Link 
       to={`/blog/${post.id}`} 
@@ -41,6 +43,14 @@ export default function BlogDetail() {
     .filter(blog => blog.id !== blogId) 
     .slice(0, 2);
 
+  const topRef = useRef(null);
+   useEffect(() => {
+    // Scroll to top of blog detail when the component mounts
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [post]);
+
   return (
     <div className="min-h-screen bg-[#0a0a2a] text-white px-6 md:px-20 py-10">
       {/* Breadcrumb */}
@@ -53,7 +63,7 @@ export default function BlogDetail() {
         {/* Main Blog Content */}
         <div className="lg:col-span-3 bg-[#1a1a3a] p-4 rounded-lg">
           {/* Image */}
-          <div className="rounded-lg overflow-hidden mb-6">
+          <div ref={topRef} className="rounded-lg overflow-hidden mb-6">
             <img
               src={post.imageURL} // Use imageURL from your post data
               alt={post.title}
@@ -65,14 +75,14 @@ export default function BlogDetail() {
           </div>
 
           {/* Title and Date/Category */}
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
+          <h1  className="text-3xl md:text-4xl font-bold mb-2">
             {post.title}
           </h1>
           <p className="text-gray-400 text-sm mb-4">{post.category} | {post.date}</p>
 
 
           {/* Content */}
-          <div className="space-y-6 text-gray-200 leading-relaxed">
+          <div  className="space-y-6 text-gray-200 leading-relaxed">
             {post.content && typeof post.content === 'string' ? (
                 // If content is a simple string, display it in a paragraph
                 <p>{post.content}</p>
